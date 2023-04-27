@@ -1,6 +1,7 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import _R4A2676_1 from '../assets/img/_R4A2676_1 2.JPG'
+import _R4A2676_1 from '../logoexce1.svg'
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -56,7 +57,7 @@ export const Banner = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span className="tagline">Welcome to my Portfolio</span>
-                                    <h1>{`Hi! I'm Lionel`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Full Stack Developer", "Scrum Master", "Machine Learning Engineerr" ]'><span className="wrap">{text}</span></span></h1>
+                                    <h1>{`Full Stack Developer`} </h1>
                                     <p>I am passionate about computer development in general, having acquired a good level in programming in recent years, I wish to offer my services in various sectors.</p>
                                     <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
                                 </div>}

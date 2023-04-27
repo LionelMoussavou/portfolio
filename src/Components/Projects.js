@@ -1,48 +1,60 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, Tab, Nav, } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/BleetSport.png";
+import bleetsport from "../assets/img/BleetSport.png"
+import osfpatriomoie from "../logoexce1.svg";
 import projImg3 from "../assets/img/Bleu-reflet.png";
-import _R4A2676_1 from "../assets/img/_R4A2676_1 2.JPG"
-import Luxury from "../assets/img/Luxury.jpg"
-import Exce from "../assets/img/Exce.png"
+import Kidangui from "../assets/img/Kidangui-Logo_Test.png"
+import Fackop from "../assets/img/fackopLogo3.png"
+import antalatransport from "../assets/img/antala-logo.png"
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
+
+
+
+
     const projects = [
         {
-            title: "Application Mobile BleetSport",
+            title: "Mobile Application",
             description: "Full Stack Developpeur",
-            imgUrl: projImg1,
+            imgUrl: bleetsport,
+            link: "https://github.com/LionelMoussavou/bleetsport"
         },
         {
-            title: "UX Designer",
-            description: "Vectorisation d'un logo",
-            imgUrl: Luxury,
+            title: "Web Application Fackop",
+            description: "Full Stack Developpeur",
+            imgUrl: Fackop,
+            link: "https://fackop-web-app.vercel.app/"
         },
         {
             title: "Essayage virtuel",
-            description: "Machine learnig",
+            description: " AI & Machine learnig",
             imgUrl: projImg3,
+            link: "https://bleu-reflet.com/"
         },
         {
-            title: "Application Mobile",
+            title: "Web apllication 7S",
             description: "Full Stack Developer",
-            imgUrl: projImg1,
+            imgUrl: osfpatriomoie,
+
         },
         {
-            title: "Création artistique",
-            description: "Design & Development",
-            imgUrl: _R4A2676_1,
+            title: " Kidangui ",
+            description: "Full stack developer",
+            imgUrl: Kidangui,
         },
         {
-            title: "Site web E-Commerce",
-            description: "Full Stack Developer",
-            imgUrl: Exce,
+            title: "Web site Antala-transport",
+            description: "Full Stack Developer (in progress)",
+            imgUrl: antalatransport,
         },
     ];
+
+
+
 
     return (
         <section className="projects" id="projects">
@@ -53,7 +65,7 @@ export const Projects = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <h2>Projects</h2>
-                                    <p>For a perpetual evolution in my chosen field, I know how to make myself available on various projects to bring my expertise and my know-how in IT and digital development.
+                                    <p>Discover my projects
                                     </p>
                                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
@@ -76,10 +88,13 @@ export const Projects = () => {
                                                                 <ProjectCard
                                                                     key={index}
                                                                     {...projects}
+
                                                                 />
                                                             )
                                                         })
                                                     }
+
+
                                                 </Row>
                                             </Tab.Pane>
                                             <Tab.Pane eventKey="section">
@@ -98,6 +113,8 @@ export const Projects = () => {
                 </Row>
             </Container>
             <img className="background-image-right" src={colorSharp2} alt=""></img>
+
+
         </section>
     )
 }

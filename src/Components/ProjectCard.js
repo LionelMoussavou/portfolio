@@ -10,6 +10,7 @@ export const ProjectCard = ({ title, description, imgUrl }) => {
                     <span>{description}</span>
                 </div>
             </div>
+
         </Col>
     )
 }
